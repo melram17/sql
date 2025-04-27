@@ -54,7 +54,11 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+When managing customer address changes, you can choose between two approaches:
+
+Type 1 (Overwrite): In this approach, the old address is replaced with the new one, meaning only the current address is stored, and no historical data is kept. This is ideal when you only need to track the most recent address.
+Type 2 (Retain Changes): Each time an address changes, a new record is created, preserving the previous address with a date range indicating its validity. This method is useful when it’s important to maintain a full history of address changes over time.
+In summary, Type 1 stores only the latest address, while Type 2 keeps a complete history of address changes.
 ```
 
 ***
